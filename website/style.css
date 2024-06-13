@@ -1,0 +1,193 @@
+body{
+    background: #AAC4FF;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 50px ;
+}
+
+#app{
+    padding: 20px;
+    display: grid;
+    grid-auto-rows: auto 1fr 1fr minmax(200px, auto);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: 
+        'logo logo logo . . . . . . .'
+        '. .  zip zip zip  feel feel feel . .'
+        '. . . gen gen gen gen . . .'
+        '. . data data data data data data . .';
+    /* height:80vh; */
+    background: #EEF1FF;
+    color: #AAC4FF;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10px;
+}
+
+/* .holder{
+
+} */
+.zip{
+    grid-area: zip;
+}
+
+.feel{
+    grid-area: feel;
+}
+
+.entry{
+    text-align: center;
+    grid-area: data;
+    background: rgba(59, 74, 107, .1);
+}
+
+#entryHolder{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "city icon temp"
+    "date . feel";
+    grid-row-gap: 30px;
+}
+
+#icon{
+    grid-area: icon;
+}
+
+#date{
+    grid-area: date;
+}
+
+#temp{
+    font-size: 40px;
+    grid-area: temp;
+}
+
+#content{
+    grid-area: feel;
+}
+
+#city{
+    font-size: 40px;
+    grid-area: city;
+}
+
+.headline {
+    font-size: 30px;
+    color: #B1B2FF;
+    grid-area: logo;
+}
+/* .title{
+    
+} */
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:#AAC4FF;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button{
+    margin: auto;
+    width: 400px;
+    height: 100px;
+    grid-area: gen;
+    display: block;
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    color: #AAC4FF;
+    font-size: 26px;
+    background: 0;
+    border: solid #AAC4FF 3px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+button:hover{
+    background: #AAC4FF;
+    color: #EEF1FF;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    background:#AAC4FF;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #fff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #fff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #fff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+@media only screen and (max-width: 1300px){
+    #app{
+        grid-template-areas: 
+            '. . . logo logo logo logo . . .'
+            '. .  . zip zip zip zip . . .'
+            '. .  .  feel feel feel feel . . .'
+            '. . . gen gen gen gen . . .'
+            '. . data data data data data data . .';
+        justify-content: center;
+        text-align: center;
+    }
+    .zip{
+        grid-area: zip;
+    }
+    .feel{
+        grid-area: feel;
+    }
+    .entry{
+        grid-area: data;
+    }
+    .headline {
+        grid-area: logo;
+    }
+    button{
+        grid-area: gen;
+    }
+    input{
+        margin: auto;
+    }
+}
